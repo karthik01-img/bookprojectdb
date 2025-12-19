@@ -6,7 +6,7 @@ var connecttodb = async()=>{
     console.log("connected to database");
     }
     catch(error){
-        console.log("error");
+        console.log("error",error);
     }
 }
 
