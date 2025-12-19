@@ -7,8 +7,10 @@ var path = require("./routes/book-routes")
 
 app.use("/books/api",path)
 
-var PORT = process.env.PORT
-app.listen(PORT,()=>{
-    console.log("its live");
-})
+const PORT = process.env.PORT || 10000
+
 connecttodb()
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`)
+})
