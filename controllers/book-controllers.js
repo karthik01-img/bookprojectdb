@@ -13,21 +13,30 @@ var getsinglebook = async(req,res)=>{
 
 var updatebooks = async(req,res)=>{
    var updated= await book.findByIdAndUpdate(req.params.id,{
-    name : req.body.name
+       title : req.body.title,
+    name : req.body.name,
+    author : req.body.author,
+    price : req.body.price
    })
    res.status(200).json({updated})
 }
 
 var createnewbook = async(req,res)=>{
     var creating = await book.create({
-        name : req.body.name
+           title : req.body.title,
+    name : req.body.name,
+    author : req.body.author,
+    price : req.body.price
     })
     res.status(200).json({creating})
 }
 
 var deletingbook = async(req,res)=>{
     var deleted = await book.findByIdAndDelete(req.params.id,{
-        name : req.body.name
+            title : req.body.title,
+    name : req.body.name,
+    author : req.body.author,
+    price : req.body.price
     })
     res.status(200).json({deleted})
 }

@@ -1,8 +1,12 @@
 var mongoose = require("mongoose")
 
 var userschema =  new mongoose.Schema({
-    name : String
+     title : String,
+    name : String,
+    author : String,
+    price : Number
 
 })
 
 module.exports = mongoose.model("booklibs",userschema)
+
